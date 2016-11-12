@@ -82,5 +82,12 @@ public class Produto implements Comparable{
 		
 		return descricao.compareTo(p.descricao);
 	}
+
+	@Override
+	public String toString() {
+		return "Produto [id=" + id + ", descricao=" + descricao + ", setor=" + setor + ", fabricante=" + fabricante
+				+ ", complemento=" + complemento + ", preco=" + preco + ", oferta=" + oferta + "]";
+	}
+	
 	
 }

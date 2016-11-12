@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>      
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,31 +59,14 @@
 		<ol class="breadcrumb">
 			<li class="active">Início</li>
 		</ol>
-
-		<div class="jumbotron">
-			<h2>Segundo a Wikipedia:</h2>
-			<blockquote>
-				<p>
-					Uma <strong>loja virtual</strong> designa uma página na internet
-					dotada de um software de gerenciamento de pedidos (usualmente na
-					forma de carrinho de compras) na qual empresas podem oferecer e
-					vender seus produtos. Os clientes acessam o site, escolhem os
-					produtos para aquisição, a forma de pagamento e recebem estes
-					produtos em casa [<a
-						href="http://pt.wikipedia.org/wiki/Loja_virtual">Wikipedia|Loja
-						Virtual</a>].
-				</p>
-			</blockquote>
-			<blockquote>
-				<p>
-					O termo <strong>stationery</strong> é o nome geral dado para papel
-					e outros materiais de escritório, tais como envelopes, blocos de
-					anotações, canetas, lápis, borrachas, clips, grampos etc [<a
-						href="http://en.wikipedia.org/wiki/Stationery">Wikipedia|Stationey</a>].
-					Assim <strong>Stationery Store</strong> designa papelaria.
-				</p>
-			</blockquote>
-		</div>
+		
+		<table class="table table-striped">
+		<c:forEach var="movie" items="${movies}">
+		<tr>
+		<td>${movie}</td>
+		</tr>
+		</c:forEach>
+		</table>
 
 	</div>
 
